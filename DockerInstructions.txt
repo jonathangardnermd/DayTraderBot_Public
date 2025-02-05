@@ -1,0 +1,91 @@
+
+--------------------------------------------
+NEWEST INSTRUCTIONS
+--------------------------------------------
+ON LOCAL MACBOOK: (from the root of the SOLUTION folder)
+    docker build -t daytraderbot:latest . 
+    docker run -it daytraderbot:latest 
+    docker tag c5eb456730fc jonathangardnermd/daytraderbot:latest
+    docker login
+    docker push jonathangardnermd/daytraderbot:latest
+
+ON NEW ARM EC2:
+    ssh -i ./Documents/keys/daytradebot_aws_ec2.pem ec2-user@52.73.42.196
+    sudo yum update -y
+    sudo yum install docker -y
+    sudo service docker start
+    sudo usermod -aG docker ec2-user
+    LOG OUT AND LOG BACK IN 
+    docker version
+
+ON ESTABLISHED EC2:
+    ssh -i ./Documents/keys/daytradebot_aws_ec2.pem ec2-user@52.73.42.196
+    docker login
+    docker pull jonathangardnermd/daytraderbot:latest
+    docker run -it jonathangardnermd/daytraderbot:latest
+
+CREATE A CONTAINER FROM THE IMAGE:
+    docker run -it --entrypoint /bin/bash c5eb456730fc (override dflt entrypoint)
+    OR
+    docker run -it jonathangardnermd/daytraderbot:latest (use dflt entrypoint)
+
+
+ENTER DOCKER CONTAINER WITHOUT RUNNING THE DFLT ENTRYPOINT:
+    docker start fc5b04275689 (the /bin/bash one)
+    docker exec -it fc5b04275689 /bin/bash
+    dotnet run --project DayTradeBot/DayTradeBot.csproj
+
+--------------------------------------------
+--------------------------------------------
+
+
+
+
+from the root of the SOLUTION folder (not the project folders)
+
+docker build -t daytraderbot:latest . 
+docker run -it daytraderbot:latest 
+docker tag c5eb456730fc jonathangardnermd/daytraderbot:latest
+docker login
+docker push jonathangardnermd/daytraderbot:latest
+
+On a new ARM EC2:
+ssh -i ./Documents/keys/daytradebot_aws_ec2.pem ec2-user@52.73.42.196
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -aG docker ec2-user
+LOG OUT AND LOG BACK IN 
+docker version
+
+
+
+NOW ON LOCAL COMP, TRANSFER THE DOCKER CONTAINER TO THE EC2:
+docker save -o ./myapp-latest.tar myapp:latest
+scp -i ./Documents/keys/daytradebot_aws_ec2.pem ./myapp-latest.tar ec2-user@52.73.42.196:/home/ec2-user/
+
+
+BACK TO THE EC2:
+ssh -i ./Documents/keys/daytradebot_aws_ec2.pem ec2-user@52.73.42.196
+docker load -i myapp-latest.tar
+docker run -it myapp:latest
+
+
+--------------------------------------------
+NEWEST INSTRUCTIONS
+--------------------------------------------
+ON LOCAL MACBOOK:
+    docker build -t daytraderbot:latest . 
+    docker run -it daytraderbot:latest 
+    docker tag c5eb456730fc jonathangardnermd/daytraderbot:latest
+    docker login
+    docker push jonathangardnermd/daytraderbot:latest
+
+ON EC2:
+    ssh -i ./Documents/keys/daytradebot_aws_ec2.pem ec2-user@52.73.42.196
+    docker login
+    docker pull jonathangardnermd/daytraderbot:latest
+    docker run -it jonathangardnermd/daytraderbot:latest
+
+--------------------------------------------
+--------------------------------------------

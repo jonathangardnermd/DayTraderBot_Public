@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTradeBot", "DayTradeBot\DayTradeBot.csproj", "{7C295D27-43D2-4088-84FB-8B78E90AF9F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDayTradeBot", "TestDayTradeBot\TestDayTradeBot.csproj", "{470FEB94-1B66-41F7-ACFD-A0B0252806CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C295D27-43D2-4088-84FB-8B78E90AF9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C295D27-43D2-4088-84FB-8B78E90AF9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C295D27-43D2-4088-84FB-8B78E90AF9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C295D27-43D2-4088-84FB-8B78E90AF9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15963B47-F5BE-4E09-B752-10C8D0B4F7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15963B47-F5BE-4E09-B752-10C8D0B4F7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15963B47-F5BE-4E09-B752-10C8D0B4F7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15963B47-F5BE-4E09-B752-10C8D0B4F7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4527E2DA-3B68-464B-B809-A5149693255B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4527E2DA-3B68-464B-B809-A5149693255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4527E2DA-3B68-464B-B809-A5149693255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4527E2DA-3B68-464B-B809-A5149693255B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD31253-D779-4F3B-9C29-F27B423AEA96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD31253-D779-4F3B-9C29-F27B423AEA96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD31253-D779-4F3B-9C29-F27B423AEA96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD31253-D779-4F3B-9C29-F27B423AEA96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470FEB94-1B66-41F7-ACFD-A0B0252806CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470FEB94-1B66-41F7-ACFD-A0B0252806CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470FEB94-1B66-41F7-ACFD-A0B0252806CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470FEB94-1B66-41F7-ACFD-A0B0252806CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
